@@ -56,3 +56,7 @@ git fsck
 
 №9
 git gc --prune=now --aggressive
+
+FOR THIS FILE
+git add -p
+e
