@@ -9,3 +9,6 @@ git branch -D ci
 git reflog
 git checkout aca3abb
 git branch old-master
+
+№3
+git blame -L 32,32 prisma/seed.ts
