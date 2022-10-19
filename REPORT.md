@@ -38,9 +38,18 @@ echo .env >> .gitignore
 
 №6
 git checkout feature
-git filter-branch --env-filter "GIT_AUTHOR_NAME='Daniil Arsentev' GIT_AUTHOR_EMAIL='arsentev.danil2@mail.ru'; GIT_COMMITTER_NAME='Daniil Arsentev'; GIT_COMMITTER_EMAIL='arsentev.danil2@mail.ru'" HEAD~6..HEAD
+git filter-branch --env-filter "GIT_AUTHOR_NAME='Арсентьев Даниил Геннадьевич'; GIT_AUTHOR_EMAIL='arsentev.danil2@mail.ru'; GIT_COMMITTER_NAME='Арсентьев Даниил Геннадьевич'; GIT_COMMITTER_EMAIL='arsentev.danil2@mail.ru'" HEAD~6..HEAD
 
 №7
 git checkout master
 git config rerere.enabled true
 git merge feature
+
+git commit -a --no-edit
+git reset --hard HEAD~1
+git merge feature
+
+git commit -a --no-edit
+
+№8
+git fsck
