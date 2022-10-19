@@ -12,3 +12,22 @@ git branch old-master
 
 №3
 git blame -L 32,32 prisma/seed.ts
+
+№4
+git checkout master
+git bisect start
+git bisect bad
+git bisect good 8673a6
+npm run test
+
+3c82961d432a69ff82d5fc958b841a54cb4c6234 is the first bad commit
+commit 3c82961d432a69ff82d5fc958b841a54cb4c6234
+Author: Nikolay Andreev <bakasaru@list.ru>
+Date:   Mon Dec 20 00:28:11 2021 +0300
+
+    feat: add seed to get games from eShop API
+
+ prisma/seed.ts     | 57 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ src/app.service.ts |  2 +-
+ 2 files changed, 58 insertions(+), 1 deletion(-)
+ create mode 100644 prisma/seed.ts
