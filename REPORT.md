@@ -53,3 +53,6 @@ git commit -a --no-edit
 
 №8
 git fsck
+
+№9
+git gc --prune=now --aggressive
