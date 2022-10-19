@@ -35,3 +35,7 @@ Date:   Mon Dec 20 00:28:11 2021 +0300
 №5
 git filter-branch --tree-filter "rm -f .env" -- --all
 echo .env >> .gitignore
+
+№6
+git checkout feature
+git filter-branch --env-filter "GIT_AUTHOR_NAME='Арсентьев Даниил Геннадьевич'; GIT_AUTHOR_EMAIL='arsentev.danil2@mail.ru'; GIT_COMMITTER_NAME='Арсентьев Даниил Геннадьевич'; GIT_COMMITTER_EMAIL='arsentev.danil2@mail.ru'" HEAD~6..HEAD
