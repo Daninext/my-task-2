@@ -31,3 +31,7 @@ Date:   Mon Dec 20 00:28:11 2021 +0300
  src/app.service.ts |  2 +-
  2 files changed, 58 insertions(+), 1 deletion(-)
  create mode 100644 prisma/seed.ts
+
+№5
+git filter-branch --tree-filter "rm -f .env" -- --all
+echo .env >> .gitignore
